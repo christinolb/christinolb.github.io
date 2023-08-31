@@ -1,6 +1,8 @@
 /* src/App.jsx */
 import React from "react";
 import "./App.css";
+import linkedinSVG from './assets/linkedin-logo.svg';
+import githubSVG from './assets/GITHUB-LOGO.svg';
 
 function SectionTitle({sectionName}) {
   return (
@@ -35,10 +37,10 @@ function App() {
         <ul class="m-0 p-0 list-none items-center flex flex-row-reverse">
           <li>
             <a class="hover:scale-75 transition delay-200 px-6 block" href="https://www.linkedin.com/in/christino-barbosa-8a4587197/" 
-                target="_blank"><img src="" width="80" height="80" alt="LinkedIn"/></a>
+                target="_blank"><img src={linkedinSVG} height='80' width='80' alt="LinkedIn"/></a>
           </li>
           <li>
-            <a class="hover:scale-75 transition delay-200 px-6 block" href="https://github.com/christinolb" target="_blank"><img src="public/img/GITHUB-LOGO.png" width="100" height="100" alt="GitHub"/></a>
+          <a class="hover:scale-75 transition delay-200 px-6 block" href="https://github.com/christinolb" target="_blank"><img src={githubSVG} width="100" height="100" alt="GitHub"/></a>
           </li>
           <li>
             <a class="hover:text-white transition delay-200 px-8 block" href="#projects">Projects</a>
