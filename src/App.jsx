@@ -66,35 +66,35 @@ function App() {
   " and sort faculty records.";
   const softwareJ4 ="ASP.NET - SQL Server - C# - Microsoft Azure";  
   return (
-    <body>
-      <nav class=" bg-[#D9D9D9] block items-center p-1">
-        <ul class="m-0 p-0 list-none items-center flex flex-row-reverse">
+    <body class="">
+      <nav class=" bg-slate-300 border-b-[1px] border-zinc-400 block items-center p-1">
+        <ul class="m-0 p-0 list-none items-center flex flex-row-reverse text-2xl">
           <li>
-            <a class="hover:scale-75 transition delay-200 px-4 block" href="https://www.linkedin.com/in/christino-barbosa-8a4587197/" 
+            <a class="hover:scale-75 transition delay-150 px-4 block" href="https://www.linkedin.com/in/christino-barbosa-8a4587197/" 
                 target="_blank"><img src={linkedinSVG} height='70' width='70' alt="LinkedIn"/></a>
           </li>
           <li>
-          <a class="hover:scale-75 transition delay-200 px-2 block" href="https://github.com/christinolb" target="_blank">
+          <a class="hover:scale-75 transition delay-150 px-2 block" href="https://github.com/christinolb" target="_blank">
             <img src={githubSVG} width="100" height="100" alt="GitHub"/></a>
           </li>
           <li>
-            <a class="hover:text-white transition delay-200 px-8 block" href="#projects">Projects</a>
+            <a class="hover:text-white hover:scale-75 transition delay-150 px-8 block" href="#projects">Projects</a>
           </li>
           <li>
-            <a class="hover:text-white transition delay-200 px-8 block" href="#experience">Experience</a>
+            <a class="hover:text-white hover:scale-75 transition delay-150 px-8 block" href="#experience">Experience</a>
           </li>
           <li>
-            <a class="hover:text-white transition delay-200 px-8 block" href="#index">About Me</a>
+            <a class="hover:text-white hover:scale-75 transition delay-150 px-8 block" href="#index">About Me</a>
           </li>
         </ul>
       </nav>
 
-      <h1 id="index" class="py-20 flex justify-center">
+      <h1 id="index" class="py-20 flex justify-center text-[70px]">
             Christino Lorenzo Barbosa
       </h1>
 
       <div class="flex justify-center">
-            <p class="w-[60rem] h-[20rem] bg-blue-400">
+            <p class="w-[60rem] h-[20rem] bg-blue-400 text-xl">
                 I started coding robots in highschool for competitions. In college I wandered into the other realms of Computer Science such as 
                 Data Science/ Machine Learning, and Web Development with various software. I worked on 3 Web Development teams for University and 
                 college, one which I lead and published a paper. On each team I played a different role project lead/ asp.net programmer, backend
