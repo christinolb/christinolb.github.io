@@ -5,6 +5,33 @@ import linkedinSVG from './assets/linkedin-logo.svg';
 import githubSVG from './assets/GITHUB-LOGO.svg';
 import lsampSVG from './assets/lsamp-webpage.svg'
 
+function Nav (){
+
+  return(
+    <nav class="border-b-[2px] p-1">
+        <ul class="m-0 p-0 list-none items-center flex flex-row-reverse text-2xl">
+          <li>
+            <a class="hover:scale-75 transition delay-150 px-4 block" href="https://www.linkedin.com/in/christino-barbosa-8a4587197/" 
+                target="_blank"><img src={linkedinSVG} height='70' width='70' alt="LinkedIn"/></a>
+          </li>
+          <li>
+          <a class="hover:scale-75 transition delay-150 px-2 block" href="https://github.com/christinolb" target="_blank">
+            <img src={githubSVG} width="100" height="100" alt="GitHub"/></a>
+          </li>
+          <li>
+            <a class="hover:scale-75 transition delay-150 px-8 block" href="#projects">Projects</a>
+          </li>
+          <li>
+            <a class="hover:scale-75 transition delay-150 px-8 block" href="#experience">Experience</a>
+          </li>
+          <li>
+            <a class="hover:scale-75 transition delay-150 px-8 block" href="#index">About Me</a>
+          </li>
+        </ul>
+      </nav>
+  );
+}
+
 function SectionTitle({sectionName}) {
   return (
     <h1 class="border-2 border-rose-600 flex justify-center py-20">
@@ -67,46 +94,40 @@ function App() {
   const softwareJ4 ="ASP.NET - SQL Server - C# - Microsoft Azure";  
   return (
     <body class="">
-      <nav class=" bg-slate-300 border-b-[1px] border-zinc-400 block items-center p-1">
-        <ul class="m-0 p-0 list-none items-center flex flex-row-reverse text-2xl">
-          <li>
-            <a class="hover:scale-75 transition delay-150 px-4 block" href="https://www.linkedin.com/in/christino-barbosa-8a4587197/" 
-                target="_blank"><img src={linkedinSVG} height='70' width='70' alt="LinkedIn"/></a>
-          </li>
-          <li>
-          <a class="hover:scale-75 transition delay-150 px-2 block" href="https://github.com/christinolb" target="_blank">
-            <img src={githubSVG} width="100" height="100" alt="GitHub"/></a>
-          </li>
-          <li>
-            <a class="hover:text-white hover:scale-75 transition delay-150 px-8 block" href="#projects">Projects</a>
-          </li>
-          <li>
-            <a class="hover:text-white hover:scale-75 transition delay-150 px-8 block" href="#experience">Experience</a>
-          </li>
-          <li>
-            <a class="hover:text-white hover:scale-75 transition delay-150 px-8 block" href="#index">About Me</a>
-          </li>
-        </ul>
-      </nav>
 
-      <h1 id="index" class="py-20 flex justify-center text-[70px]">
-            Christino Lorenzo Barbosa
-      </h1>
+      <div class="snap-y snap-mandatory">
+        <div class="snap-center">
+          <div class="border-4">
+            {/*NAV BAR */}
+            <Nav />
 
-      <div class="flex justify-center">
-            <p class="w-[60rem] h-[20rem] bg-blue-400 text-xl">
-                I started coding robots in highschool for competitions. In college I wandered into the other realms of Computer Science such as 
-                Data Science/ Machine Learning, and Web Development with various software. I worked on 3 Web Development teams for University and 
-                college, one which I lead and published a paper. On each team I played a different role project lead/ asp.net programmer, backend
-                and fullstack developer.
-    
-                Having wokred with web development in various projects has inspired me to continue to build my skillset in the field and
-                pursue a career oriented around such skills. My focus is building websites which exceed the standard and are sleek in design.
-                
-                Other than coding I love to start my day with long runs and end it with a fun bass and trombone jam sesh!
-            </p>
+            <h1 id="index" class="pt-20 flex justify-center text-[70px] text-[#3F6184]">
+                  Christino Lorenzo Barbosa
+            </h1>
+
+            <h3 class="pt-1 pb-[70px] text-[#3F6184] text-[26px]">
+              Engineer concise Software for clintele needs
+            </h3>
+
+            <div class="">
+                  <p class="w-[60rem] h-[20rem] text-[#778899] text-xl text-left py-10">
+                      Across the realms of Computer Science Autonomously or Cooperatively...<br/><br/>
+
+                  </p>
+            </div>
+          </div>
+        </div>
       </div>
 
+      <div class="snap-center snap-always">
+        <SectionTitle sectionName="Projects" />
+        <>
+          <Project projName="Rutgers University GS-LSAMP Website" workProof="https://github.com/rutgers-newark-gslsamp/run-gslsamp-site"
+          img={lsampSVG} alt="Mockup Contact Us Page" software="HTML - CSS - PHP - PHPMailer - GitHub - Git - Figma"/>
+
+          <Project projName="Course Of Study Database" img="" alt="ERD" software="SQL Server - Lucid Chart"/>
+        </>
+      </div>
       <SectionTitle sectionName="Experience" />
       <>
         <Experience jobTitle="Web Developer" company="Rutgers Newark LSAMP" start="January 2023" end="August 2023" 
@@ -122,17 +143,7 @@ function App() {
         description={descJ4} software={softwareJ4}/>
 
       </>
-
-      <SectionTitle sectionName="Projects" />
-      <>
-        <Project projName="Rutgers University GS-LSAMP Website" workProof="https://github.com/rutgers-newark-gslsamp/run-gslsamp-site"
-         img={lsampSVG} alt="Mockup Contact Us Page" software="HTML - CSS - PHP - PHPMailer - GitHub - Git - Figma"/>
-
-        <Project projName="Course Of Study Database" img="" alt="ERD" software="SQL Server - Lucid Chart"/>
-      </>
-
-
-    
+ 
       
     </body>
   );
