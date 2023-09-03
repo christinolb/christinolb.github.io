@@ -8,7 +8,7 @@ import lsampSVG from './assets/lsamp-webpage.svg'
 function Nav (){
 
   return(
-    <nav class="border-b-[2px] p-1">
+    <nav id="index" class="border-b-[2px] p-1">
         <ul class="m-0 p-0 list-none items-center flex flex-row-reverse text-2xl">
           <li>
             <a class="hover:scale-75 transition delay-150 px-4 block" href="https://www.linkedin.com/in/christino-barbosa-8a4587197/" 
@@ -19,10 +19,10 @@ function Nav (){
             <img src={githubSVG} width="100" height="100" alt="GitHub"/></a>
           </li>
           <li>
-            <a class="hover:scale-75 transition delay-150 px-8 block" href="#projects">Projects</a>
+            <a class="hover:scale-75 transition delay-150 px-8 block" href="#experience">Experience</a>
           </li>
           <li>
-            <a class="hover:scale-75 transition delay-150 px-8 block" href="#experience">Experience</a>
+            <a class="hover:scale-75 transition delay-150 px-8 block" href="#projects">Projects</a>
           </li>
           <li>
             <a class="hover:scale-75 transition delay-150 px-8 block" href="#index">About Me</a>
@@ -32,9 +32,9 @@ function Nav (){
   );
 }
 
-function SectionTitle({sectionName}) {
+function SectionTitle({sectionName, bookmarkId}) {
   return (
-    <h1 class="border-2 border-rose-600 flex justify-center py-20">
+    <h1 id={bookmarkId} class="border-2 flex justify-center py-10 text-[50px]">
         {sectionName ? sectionName : "Default section name"}
     </h1>
   );
@@ -43,33 +43,35 @@ function SectionTitle({sectionName}) {
 function Experience({jobTitle, company, start, end, description, software}) {
 
   return (
-    <div><br /><br /><br />
-                <h3>
-                {jobTitle ? jobTitle : "Default"} - {company ? company : "Default"}<br /><br />
-                {start ? start : "Default"} - {end ? end : "Default"}<br /><br />
-                </h3>
+    <div class="grid grid-row-2">
+      <div class="grid grid-cols-2">
+        <div class="">
+          {jobTitle ? jobTitle : "Default"} - {company ? company : "Default"}<br /><br />
+          {start ? start : "Default"} - {end ? end : "Default"}<br /><br />
+        </div>
 
-                <p>
-                {description ? description : "Default"}<br /><br />
-                    
-                    <b>{software ? software : "Default"}</b>
-                </p>
+        <div class="">
+          {description ? description : "Default"}<br />
+                      
+          <b>{software ? software : "Default"}</b>
+        </div>
       </div>
+    </div>
   );
 }
 
 function Project ({projName, workProof, img, alt, software}) {
 
   return (
-    <div>
-      <div><br /><br /><br />
+    <div class="h-1/2">
+      <div class="">
         {projName}
       </div>
 
-      <div><br /><br />
-      <a href={workProof} target="_blank"><img src={img} 
-      height="600px" width="700px" alt={alt}/></a>
-      </div><br /><br />
+      <div class="">
+        <a class="flex justify-center" href={workProof} target="_blank"><img src={img} height="20%" width="20%" alt={alt}/></a>
+      </div>
+
       <b>{software}</b>
     </div>
   );
@@ -93,57 +95,61 @@ function App() {
   " and sort faculty records.";
   const softwareJ4 ="ASP.NET - SQL Server - C# - Microsoft Azure";  
   return (
-    <body class="">
-
-      <div class="snap-y snap-mandatory">
-        <div class="snap-center">
-          <div class="border-4">
+    <body class="h-screen">
+          <div class="h-full">
             {/*NAV BAR */}
             <Nav />
 
-            <h1 id="index" class="pt-20 flex justify-center text-[70px] text-[#3F6184]">
+            <h1 class="pt-20 flex justify-center text-[70px] text-[#3F6184]">
                   Christino Lorenzo Barbosa
             </h1>
 
             <h3 class="pt-1 pb-[70px] text-[#3F6184] text-[26px]">
-              Engineer concise Software for clintele needs
+              Engineering concise Software for clintele needs
             </h3>
 
-            <div class="">
-                  <p class="w-[60rem] h-[20rem] text-[#778899] text-xl text-center pl-[14rem] py-10">
-                      Across the realms of Computer Science Autonomously or Cooperatively...<br/><br/>
+            <div class="flex justify-center">
+                  <p class="w-[60rem] h-[20rem] text-[#778899] text-xl justify-center py-10">
+                      Across the realms of Computer Science Autonomously and Cooperatively...<br/><br/>
 
                   </p>
             </div>
           </div>
-        </div>
-      </div>
+      
 
-      <div class="snap-center snap-always">
-        <SectionTitle sectionName="Projects" />
-        <>
+      <div class="border-rose-600 border-2 h-full">
+        <SectionTitle bookmarkId="projects" sectionName="Projects" />
+
           <Project projName="Rutgers University GS-LSAMP Website" workProof="https://github.com/rutgers-newark-gslsamp/run-gslsamp-site"
           img={lsampSVG} alt="Mockup Contact Us Page" software="HTML - CSS - PHP - PHPMailer - GitHub - Git - Figma"/>
 
           <Project projName="Course Of Study Database" img="" alt="ERD" software="SQL Server - Lucid Chart"/>
-        </>
       </div>
-      <SectionTitle sectionName="Experience" />
-      <>
-        <Experience jobTitle="Web Developer" company="Rutgers Newark LSAMP" start="January 2023" end="August 2023" 
-        description={descJ1} software={softwareJ1}/>
 
-        <Experience jobTitle="Database Developer" company="Rutgers IT" start="February 2023" end="May 2023" 
-        description={descJ2} software={softwareJ2}/> 
+      <div class="h-full">
+        <SectionTitle bookmarkId="experience" sectionName="Experience" />
 
-        <Experience jobTitle="Research Assistant" company="Rutgers Data Science" start="January 2022" end="December 2022" 
-        description={descJ3} software={softwareJ3}/>
+        <div class="border-rose-600 border-2">
+          <Experience jobTitle="Web Developer" company="Rutgers Newark LSAMP" start="January 2023" end="August 2023" 
+          description={descJ1} software={softwareJ1}/>
+        </div>
 
-        <Experience jobTitle="Project Leader" company="Union County College" start="January 2021" end="August 2021" 
-        description={descJ4} software={softwareJ4}/>
+        <div class="border-rose-500 border-2">
+          <Experience jobTitle="Database Developer" company="Rutgers IT" start="February 2023" end="May 2023" 
+          description={descJ2} software={softwareJ2}/> 
+        </div>
 
-      </>
- 
+        <div class="border-rose-400 border-2">
+          <Experience jobTitle="Research Assistant" company="Rutgers Data Science" start="January 2022" end="December 2022" 
+          description={descJ3} software={softwareJ3}/>
+        </div>
+
+        <div class="border-rose-300 border-2">
+          <Experience jobTitle="Project Leader" company="Union County College" start="January 2021" end="August 2021" 
+          description={descJ4} software={softwareJ4}/>
+        </div>
+
+      </div>
       
     </body>
   );
