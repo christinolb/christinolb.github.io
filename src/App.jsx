@@ -110,7 +110,7 @@ function App() {
             </h3>
 
             <div class="">
-                  <p class="w-[60rem] h-[20rem] text-[#778899] text-xl text-left py-10">
+                  <p class="w-[60rem] h-[20rem] text-[#778899] text-xl text-center pl-[14rem] py-10">
                       Across the realms of Computer Science Autonomously or Cooperatively...<br/><br/>
 
                   </p>
