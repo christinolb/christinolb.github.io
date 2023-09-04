@@ -25,7 +25,7 @@ function Nav (){
             <a class="hover:scale-75 transition delay-150 px-8 block" href="#projects">Projects</a>
           </li>
           <li>
-            <a class="hover:scale-75 transition delay-150 px-8 block" href="#index">About Me</a>
+            <a class="hover:scale-75 transition delay-150 px-8 block" href="#index">About</a>
           </li>
         </ul>
       </nav>
@@ -34,7 +34,7 @@ function Nav (){
 
 function SectionTitle({sectionName, bookmarkId}) {
   return (
-    <h1 id={bookmarkId} class="border-2 text-left pl-6 py-8 text-[40px]">
+    <h1 id={bookmarkId} class="text-left py-8 text-[40px]">
         {sectionName ? sectionName : "Default section name"}
     </h1>
   );
@@ -43,20 +43,18 @@ function SectionTitle({sectionName, bookmarkId}) {
 function Experience({jobTitle, company, start, end, description, software}) {
 
   return (
-    <div class="grid grid-row-2">
-      <div class="grid grid-cols-2">
-        <div class="">
+    <div class="grid grid-cols-2">
+        <div class="text-[#778899] text-xl grid place-content-start text-left">
           {jobTitle ? jobTitle : "Default"} - {company ? company : "Default"}<br /><br />
-          {start ? start : "Default"} - {end ? end : "Default"}<br /><br />
+          <span className="font-light text-lg">{start} - {end}</span>
         </div>
-
+        
         <div class="">
-          {description ? description : "Default"}<br />
-                      
-          <b>{software ? software : "Default"}</b>
+          {description ? <p class="text-left text-lg tracking-wide text-[#3F6184]">{description}</p> : "Default"}<br />
+
+          <p className="font-bold text-left flex flex-row-wrap">{software}</p>
         </div>
       </div>
-    </div>
   );
 }
 
@@ -64,12 +62,12 @@ function Project ({projName, workProof, img, alt, software}) {
 
   return (
     <div class="h-1/2">
-      <div class="grid grid-cols-2 border-red-400 border-2 h-1/2">
+      <div class="grid grid-cols-2 h-1/2">
           <div class="">
-            <a class="flex justify-center" href={workProof} target="_blank"><img src={img} height="50%" width="50%" alt={alt}/></a>
+            <a class="flex justify-center" href={workProof} target="_blank"><img src={img} height="70%" width="70%" alt={alt}/></a>
           </div>
 
-          <div class="p-4 text-lg text-left">
+          <div class="text-lg text-left grid place-content-center">
             {projName}<br/>
             <b>{software}</b>
           </div>
@@ -79,12 +77,25 @@ function Project ({projName, workProof, img, alt, software}) {
 }
 
 function App() {
-  const descJ1 = "Implemented Software Development Cycle for website front and backend,"+
-  " maintained web domain with respect to Rutgers web protocols and tracked changes with version control software.";
+  const softwareE1 = (
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>PHP</li>
+      <li>PHPMailer</li>
+      <li>GitHub</li>
+      <li>Git</li>
+      <li>Figma</li>
+    </ul>
+  );
+
+  const descJ1 = "Implemented Software Development Cycle, with small team, for website front and backend."+
+  " Maintained web domain with respect to Rutgers web protocols and tracked changes with version control software.";
   const softwareJ1 = "CSS - HTML - JavaScript - PHP - PHPMailer - Git - GitHub - Figma - WAMP";
 
   const descJ2 ="Built entity relationship diagrams and implemented in MySQL. Formulate queries to store user input to database and "+
-  "created triggers for auto generation of records in other tables. Normalized tables for first normal form.";
+  "created triggers for auto generation of records in other tables. Normalized tables for first normal form. Work with members to merge "+
+  "database with backend and answer questions related to debuging in the process.";
   const softwareJ2 = "MySQL - Lucid Chart";
 
   const descJ3 = "Developed code to conduct experiments in a Head-Mounted Display using Psychtoolbox library and others in MATLAB."+
@@ -118,39 +129,41 @@ function App() {
           </div>
       
 
-      <div class="border-rose-600 border-2 h-full">
+      <div class="h-full">
         <SectionTitle bookmarkId="projects" sectionName="Projects" />
 
           <Project projName="Rutgers University GS-LSAMP Website" workProof="https://github.com/rutgers-newark-gslsamp/run-gslsamp-site"
-          img={lsampSVG} alt="Mockup Contact Us Page" software="HTML - CSS - PHP - PHPMailer - GitHub - Git - Figma"/>
+          img={lsampSVG} alt="Mockup Contact Us Page" software={softwareE1}/>
 
-          <Project projName="Course Of Study Database" img="" alt="ERD" software="SQL Server - Lucid Chart"/>
+          <Project projName="Course Of Study Database" img={lsampSVG} alt="ERD" software="SQL Server - Lucid Chart"/>
       </div>
 
       <div class="h-full">
         <SectionTitle bookmarkId="experience" sectionName="Experience" />
 
-        <div class="border-rose-600 border-2">
+        <div class="h-1/4">
           <Experience jobTitle="Web Developer" company="Rutgers Newark LSAMP" start="January 2023" end="August 2023" 
           description={descJ1} software={softwareJ1}/>
         </div>
 
-        <div class="border-rose-500 border-2">
+        <div class="h-1/4">
           <Experience jobTitle="Database Developer" company="Rutgers IT" start="February 2023" end="May 2023" 
           description={descJ2} software={softwareJ2}/> 
         </div>
 
-        <div class="border-rose-400 border-2">
+        <div class="h-1/4">
           <Experience jobTitle="Research Assistant" company="Rutgers Data Science" start="January 2022" end="December 2022" 
           description={descJ3} software={softwareJ3}/>
         </div>
 
-        <div class="border-rose-300 border-2">
+        <div class="h-1/4">
           <Experience jobTitle="Project Leader" company="Union County College" start="January 2021" end="August 2021" 
           description={descJ4} software={softwareJ4}/>
         </div>
 
       </div>
+      <br/><br/>
+      <footer class="font-light">Drafted in figma, coded in Visual Studio Code. Built with Tailwindcss, React and Vite.</footer>
       
     </body>
   );
