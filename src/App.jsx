@@ -34,7 +34,7 @@ function Nav (){
 
 function SectionTitle({sectionName, bookmarkId}) {
   return (
-    <h1 id={bookmarkId} class="border-2 flex justify-center py-10 text-[50px]">
+    <h1 id={bookmarkId} class="border-2 text-left pl-6 py-8 text-[40px]">
         {sectionName ? sectionName : "Default section name"}
     </h1>
   );
@@ -64,15 +64,16 @@ function Project ({projName, workProof, img, alt, software}) {
 
   return (
     <div class="h-1/2">
-      <div class="">
-        {projName}
-      </div>
+      <div class="grid grid-cols-2 border-red-400 border-2 h-1/2">
+          <div class="">
+            <a class="flex justify-center" href={workProof} target="_blank"><img src={img} height="50%" width="50%" alt={alt}/></a>
+          </div>
 
-      <div class="">
-        <a class="flex justify-center" href={workProof} target="_blank"><img src={img} height="20%" width="20%" alt={alt}/></a>
+          <div class="p-4 text-lg text-left">
+            {projName}<br/>
+            <b>{software}</b>
+          </div>
       </div>
-
-      <b>{software}</b>
     </div>
   );
 }
