@@ -19,10 +19,10 @@ function Nav (){
             <img src={githubSVG} width="100" height="100" alt="GitHub"/></a>
           </li>
           <li>
-            <a class="hover:scale-75 transition delay-150 px-8 block" href="#experience">Experience</a>
+            <a class="hover:scale-75 transition delay-150 px-8 block" href="#experience">Experience & Work</a>
           </li>
           <li>
-            <a class="hover:scale-75 transition delay-150 px-8 block" href="#work">Work</a>
+            <a class="hover:scale-75 transition delay-150 px-8 block" href="#projects">Projects</a>
           </li>
           <li>
             <a class="hover:scale-75 transition delay-150 px-8 block" href="#index">About</a>
@@ -32,7 +32,7 @@ function Nav (){
   );
 }
 
-function Experience({jobTitle, company, start, end, description, software}) {
+function Experience({jobTitle, company, start, end, description, software, workResults}) {
 
   return (
     <div class="grid grid-cols-2">
@@ -45,29 +45,26 @@ function Experience({jobTitle, company, start, end, description, software}) {
           {description ? <p class="text-left text-lg tracking-wide text-[#3F6184]">{description}</p> : "Default"}<br />
 
           <p className="font-bold text-left flex flex-row-wrap">{software}</p>
+
+          <p className="font-bold text-left flex flex-row-wrap hover:underline decoration-[#3F6184]">{workResults}</p>
         </div>
-      </div>
+    </div>
   );
 }
 
 function Work ({projName, description, software}) {
 
   return (
-    <div class="h-1/2">
-      <div class="grid grid-cols-2 h-1/2">
-          {/*<div class="">
-            <a class="flex justify-center" href={workProof} target="_blank"><img src={img} height="70%" width="70%" alt={alt}/></a>
-  </div>**/}
+    <div class="grid grid-cols-2">
+        <div class="text-[#778899] text-xl grid place-content-start text-left">
+          {projName}
+        </div>
+        
+        <div class="">
+          {description ? <p class="text-left text-lg tracking-wide text-[#3F6184]">{description}</p> : "Default"}<br />
 
-          <div class="text-lg text-left grid place-content-left">
-            <span className="text-[25px]">{projName}</span><br/><br/>
-          </div>
-
-          <div class="">
-            <p class="text-left text-lg tracking-wide text-[#3F6184]">{description ? description: "Here is a short description"}</p>
-          <b>{software}</b>
-          </div>
-      </div>
+          <p className="font-bold text-left flex flex-row-wrap">{software}</p>
+        </div>
     </div>
   );
 }
@@ -107,6 +104,8 @@ function App() {
       <li class="float-left rounded-xl bg-[#5FAEB6] mx-1 px-1">JavaScript</li>
     </ul>
   );
+
+  const workResult1 = '';
 
   const descJ2 ="Built entity relationship diagrams and implemented in MySQL. Formulate queries to store user input to database and "+
   "created triggers for auto generation of records in other tables. Normalized tables for first normal form. Work with members to merge "+
@@ -167,32 +166,36 @@ function App() {
             <div class="flex justify-center">
                   <p class="w-[60rem] h-[20rem] text-[#778899] text-xl justify-center py-10">
                       Across the realms of Computer Science Autonomously and Cooperatively...<br/><br/>
-
                   </p>
             </div>
           </div>
       
 
-      <div id="work" class="h-[70vw]">
-        <div className="h-1/5">
-          <Work projName="Rutgers University GS-LSAMP Website" workProof="https://github.com/rutgers-newark-gslsamp/run-gslsamp-site"
-            img={lsampSVG} alt="Mockup Contact Us Page" software={softwareP1}/>
+      <div id="projects" class="h-[60vw]">
+        <div className="h-1/5 border-2">
+          <Work projName="Rutgers University GS-LSAMP Website" description="Short description"  software={softwareP1}/>
         </div>
 
-        <div className="h-1/5">
+        <div className="h-1/5 border-2">
           <Work projName="Course Of Study Database" img={lsampSVG} alt="ERD" software={softwareP2}/>
+          Report
         </div>
 
-        <div className="h-1/5">
+        <div className="h-1/5 border-2">
           <Work projName="Robustness of a Two-Stage Procedure" img="" alt="Robustness of a Two-Stage Procedure Paper" software={softwareP2}/>
+          Research Poster and Paper
         </div>
 
-        <div className="h-1/5">
-          Bruno project (poster and Paper)
+        <div className="h-1/5 border-2">
+          <Work projName="Observer sensitivity to oriented stimuli altered after adaptation"
+           description="short desctription (I presented at the Fall 2022 GS-LSAMP conference)"
+           software="Software used" />
+          Research Poster and Abstract
         </div>
 
-        <div className="h-1/5">
-          Faculty File Managment (paper, General Process and ERD)
+        <div className="h-1/5 border-2">
+          <Work projName="Faculty Record File Management System" description="description of project" software="software used" />
+          Paper and General Process
         </div>
 
 
@@ -206,7 +209,7 @@ function App() {
 
         <div class="h-1/5">
           <Experience jobTitle="Web Developer" company="Rutgers Newark LSAMP" start="January 2023" end="August 2023" 
-          description={descJ1} software={softwareJ1}/>
+          description={descJ1} software={softwareJ1} workResults={workResult1}/>
         </div>
 
         <div class="h-1/5">
@@ -225,7 +228,7 @@ function App() {
         </div>
         
         <div class="h-1/5">
-          <Experience jobTitle="Work Leader" company="Union County College" start="January 2021" end="August 2021" 
+          <Experience jobTitle="Team Leader" company="Union County College" start="January 2021" end="August 2021" 
           description={descJ4} software={softwareJ4}/>
         </div>
 
