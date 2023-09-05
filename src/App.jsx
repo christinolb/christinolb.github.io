@@ -22,21 +22,13 @@ function Nav (){
             <a class="hover:scale-75 transition delay-150 px-8 block" href="#experience">Experience</a>
           </li>
           <li>
-            <a class="hover:scale-75 transition delay-150 px-8 block" href="#projects">Projects</a>
+            <a class="hover:scale-75 transition delay-150 px-8 block" href="#work">Work</a>
           </li>
           <li>
             <a class="hover:scale-75 transition delay-150 px-8 block" href="#index">About</a>
           </li>
         </ul>
       </nav>
-  );
-}
-
-function SectionTitle({sectionName, bookmarkId}) {
-  return (
-    <h1 id={bookmarkId} class="text-left py-8 text-[40px]">
-        {sectionName ? sectionName : "Default section name"}
-    </h1>
   );
 }
 
@@ -58,18 +50,22 @@ function Experience({jobTitle, company, start, end, description, software}) {
   );
 }
 
-function Project ({projName, workProof, img, alt, software}) {
+function Work ({projName, description, software}) {
 
   return (
     <div class="h-1/2">
       <div class="grid grid-cols-2 h-1/2">
-          <div class="">
+          {/*<div class="">
             <a class="flex justify-center" href={workProof} target="_blank"><img src={img} height="70%" width="70%" alt={alt}/></a>
-          </div>
+  </div>**/}
 
           <div class="text-lg text-left grid place-content-left">
             <span className="text-[25px]">{projName}</span><br/><br/>
-            <b>{software}</b>
+          </div>
+
+          <div class="">
+            <p class="text-left text-lg tracking-wide text-[#3F6184]">{description ? description: "Here is a short description"}</p>
+          <b>{software}</b>
           </div>
       </div>
     </div>
@@ -140,6 +136,19 @@ function App() {
     </ul>
   );
 
+  const descJ5 =" Learned and practiced the necessary statistics topics, R libraries and syntax through my advisor and open resources" +
+  " to conduct the experiment. Generated random populations of varying size, population shape (normal, uniform and mixed-normal)" +
+  + "and variance ratio then applied a two-stage procedure determining whether a type 1 error had been committed.";
+  const softwareJ5 = (
+    <ul>
+      <li class="float-left rounded-xl bg-[#5FAEB6] mx-1 px-1">R Studio</li>
+      <li class="float-left rounded-xl bg-[#5FAEB6] mx-1 px-1">ANOVA</li>
+      <li class="float-left rounded-xl bg-[#5FAEB6] mx-1 px-1">Levene test</li>
+      <li class="float-left rounded-xl bg-[#5FAEB6] mx-1 px-1">Welch test</li>
+      <li class="float-left rounded-xl bg-[#5FAEB6] mx-1 px-1">t-test</li>
+    </ul>
+  );
+
 
   return (
     <body class="h-screen">
@@ -164,37 +173,63 @@ function App() {
           </div>
       
 
-      <div class="h-full">
-        <SectionTitle bookmarkId="projects" sectionName="Projects" />
+      <div id="work" class="h-[70vw]">
+        <div className="h-1/5">
+          <Work projName="Rutgers University GS-LSAMP Website" workProof="https://github.com/rutgers-newark-gslsamp/run-gslsamp-site"
+            img={lsampSVG} alt="Mockup Contact Us Page" software={softwareP1}/>
+        </div>
 
-          <Project projName="Rutgers University GS-LSAMP Website" workProof="https://github.com/rutgers-newark-gslsamp/run-gslsamp-site"
-          img={lsampSVG} alt="Mockup Contact Us Page" software={softwareP1}/>
+        <div className="h-1/5">
+          <Work projName="Course Of Study Database" img={lsampSVG} alt="ERD" software={softwareP2}/>
+        </div>
 
-          <Project projName="Course Of Study Database" img={lsampSVG} alt="ERD" software={softwareP2}/>
+        <div className="h-1/5">
+          <Work projName="Robustness of a Two-Stage Procedure" img="" alt="Robustness of a Two-Stage Procedure Paper" software={softwareP2}/>
+        </div>
+
+        <div className="h-1/5">
+          Bruno project (poster and Paper)
+        </div>
+
+        <div className="h-1/5">
+          Faculty File Managment (paper, General Process and ERD)
+        </div>
+
+
       </div>
 
-      <div class="h-full">
-        <SectionTitle bookmarkId="experience" sectionName="Experience" />
+      <div class="h-[10vw]">
 
-        <div class="h-1/4">
+      </div>
+
+      <div id="experience" class="h-[70vw]">
+
+        <div class="h-1/5">
           <Experience jobTitle="Web Developer" company="Rutgers Newark LSAMP" start="January 2023" end="August 2023" 
           description={descJ1} software={softwareJ1}/>
         </div>
 
-        <div class="h-1/4">
+        <div class="h-1/5">
           <Experience jobTitle="Database Developer" company="Rutgers IT" start="February 2023" end="May 2023" 
           description={descJ2} software={softwareJ2}/> 
         </div>
 
-        <div class="h-1/4">
+        <div class="h-1/5">
           <Experience jobTitle="Research Assistant" company="Rutgers Data Science" start="January 2022" end="December 2022" 
           description={descJ3} software={softwareJ3}/>
         </div>
 
-        <div class="h-1/4">
-          <Experience jobTitle="Project Leader" company="Union County College" start="January 2021" end="August 2021" 
+        <div class="h-1/5">
+          <Experience jobTitle="Research Intern" company="St. Peters University" start="May 2021" end="September 2021" 
+          description={descJ5} software={softwareJ5}/>
+        </div>
+        
+        <div class="h-1/5">
+          <Experience jobTitle="Work Leader" company="Union County College" start="January 2021" end="August 2021" 
           description={descJ4} software={softwareJ4}/>
         </div>
+
+        
 
       </div>
       <br/><br/>
