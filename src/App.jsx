@@ -67,8 +67,8 @@ function Project ({projName, workProof, img, alt, software}) {
             <a class="flex justify-center" href={workProof} target="_blank"><img src={img} height="70%" width="70%" alt={alt}/></a>
           </div>
 
-          <div class="text-lg text-left grid place-content-center">
-            {projName}<br/>
+          <div class="text-lg text-left grid place-content-left">
+            <span className="text-[25px]">{projName}</span><br/><br/>
             <b>{software}</b>
           </div>
       </div>
@@ -77,35 +77,70 @@ function Project ({projName, workProof, img, alt, software}) {
 }
 
 function App() {
-  const softwareE1 = (
+  const softwareP1 = (
     <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>PHP</li>
-      <li>PHPMailer</li>
-      <li>GitHub</li>
-      <li>Git</li>
-      <li>Figma</li>
+      <li class="float-left rounded-xl bg-[#5FAEB6] mx-1 px-1">CSS</li>
+      <li class="float-left rounded-xl bg-[#5FAEB6] mx-1 px-1">HTML</li>
+      <li class="float-left rounded-xl bg-[#5FAEB6] mx-1 px-1">PHP</li>
+      <li class="float-left rounded-xl bg-[#5FAEB6] mx-1 px-1">PHPMailer</li>
+      <li class="float-left rounded-xl bg-[#5FAEB6] mx-1 px-1">GitHub</li>
+      <li class="float-left rounded-xl bg-[#5FAEB6] mx-1 px-1">Git</li>
+      <li class="float-left rounded-xl bg-[#5FAEB6] mx-1 px-1">Figma</li>
+    </ul>
+  );
+
+  const softwareP2 = (
+    <ul>
+      <li class="float-left rounded-xl bg-[#5FAEB6] mx-1 px-1">SQL Server</li>
+      <li class="float-left rounded-xl bg-[#5FAEB6] mx-1 px-1">Lucid Chart</li>
     </ul>
   );
 
   const descJ1 = "Implemented Software Development Cycle, with small team, for website front and backend."+
   " Maintained web domain with respect to Rutgers web protocols and tracked changes with version control software.";
-  const softwareJ1 = "CSS - HTML - JavaScript - PHP - PHPMailer - Git - GitHub - Figma - WAMP";
+  const softwareJ1 = (
+    <ul>
+      <li class="float-left rounded-xl bg-[#5FAEB6] mx-1 px-1">CSS</li>
+      <li class="float-left rounded-xl bg-[#5FAEB6] mx-1 px-1">HTML</li>
+      <li class="float-left rounded-xl bg-[#5FAEB6] mx-1 px-1">PHP</li>
+      <li class="float-left rounded-xl bg-[#5FAEB6] mx-1 px-1">PHPMailer</li>
+      <li class="float-left rounded-xl bg-[#5FAEB6] mx-1 px-1">GitHub</li>
+      <li class="float-left rounded-xl bg-[#5FAEB6] mx-1 px-1">Git</li>
+      <li class="float-left rounded-xl bg-[#5FAEB6] mx-1 px-1">Figma</li>
+      <li class="float-left rounded-xl bg-[#5FAEB6] mx-1 px-1">WAMP</li>
+      <li class="float-left rounded-xl bg-[#5FAEB6] mx-1 px-1">JavaScript</li>
+    </ul>
+  );
 
   const descJ2 ="Built entity relationship diagrams and implemented in MySQL. Formulate queries to store user input to database and "+
   "created triggers for auto generation of records in other tables. Normalized tables for first normal form. Work with members to merge "+
   "database with backend and answer questions related to debuging in the process.";
-  const softwareJ2 = "MySQL - Lucid Chart";
+  const softwareJ2 = softwareP2;
 
   const descJ3 = "Developed code to conduct experiments in a Head-Mounted Display using Psychtoolbox library and others in MATLAB."+
   "Installed appropriate drivers for HMD to display stimuli. Used Vizard to create virtual environments in HMD. Use summary statistics,"+
   "distribution plots and joy plots in R for easy assesment of experiment data.";
-  const softwareJ3 = "Python - Linux - MATLAB - R Studio";
+  const softwareJ3 = (
+    <ul>
+      <li class="float-left rounded-xl bg-[#5FAEB6] mx-1 px-1">Python</li>
+      <li class="float-left rounded-xl bg-[#5FAEB6] mx-1 px-1">Linux</li>
+      <li class="float-left rounded-xl bg-[#5FAEB6] mx-1 px-1">MATLAB</li>
+      <li class="float-left rounded-xl bg-[#5FAEB6] mx-1 px-1">R Studio</li>
+    </ul>
+  );
 
   const descJ4 ="Created a SQL server database through Azure, and a document management system using C# asp.NET framework to manage"+
   " and sort faculty records.";
-  const softwareJ4 ="ASP.NET - SQL Server - C# - Microsoft Azure";  
+  const softwareJ4 = (
+    <ul>
+      <li class="float-left rounded-xl bg-[#5FAEB6] mx-1 px-1">ASP.NET</li>
+      <li class="float-left rounded-xl bg-[#5FAEB6] mx-1 px-1">SQL Server</li>
+      <li class="float-left rounded-xl bg-[#5FAEB6] mx-1 px-1">C#</li>
+      <li class="float-left rounded-xl bg-[#5FAEB6] mx-1 px-1">Microsoft Azure</li>
+    </ul>
+  );
+
+
   return (
     <body class="h-screen">
           <div class="h-full">
@@ -133,9 +168,9 @@ function App() {
         <SectionTitle bookmarkId="projects" sectionName="Projects" />
 
           <Project projName="Rutgers University GS-LSAMP Website" workProof="https://github.com/rutgers-newark-gslsamp/run-gslsamp-site"
-          img={lsampSVG} alt="Mockup Contact Us Page" software={softwareE1}/>
+          img={lsampSVG} alt="Mockup Contact Us Page" software={softwareP1}/>
 
-          <Project projName="Course Of Study Database" img={lsampSVG} alt="ERD" software="SQL Server - Lucid Chart"/>
+          <Project projName="Course Of Study Database" img={lsampSVG} alt="ERD" software={softwareP2}/>
       </div>
 
       <div class="h-full">
