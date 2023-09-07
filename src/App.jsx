@@ -123,8 +123,8 @@ function App() {
   );
   const workResult3 = (
     <ul>
-      <li class="font-bold hover:underline inline-block text-[#3F6184] decoration-2 px-1"><a href={abstract} target="_blank">Abstract</a></li>
       <li class="font-bold hover:underline inline-block text-[#3F6184] decoration-2 px-2"><a href={posterBr} target="_blank">Presentation Poster</a></li>
+      <li class="font-bold hover:underline inline-block text-[#3F6184] decoration-2 px-1"><a href={abstract} target="_blank">Abstract</a></li>
     </ul>
   );
 
@@ -140,9 +140,8 @@ function App() {
   );
   const workResult4 = (
     <ul>
-      <li class="font-bold hover:underline inline-block text-[#3F6184] decoration-2 px-1"><a href={frfdmsPaper} target="_blank">Paper</a></li>
       <li class="font-bold hover:underline inline-block text-[#3F6184] decoration-2 px-2"><a href={frfdmsProcess} target="_blank">Flow Diagram</a></li>
-    </ul>
+      <li class="font-bold hover:underline inline-block text-[#3F6184] decoration-2 px-1"><a href={frfdmsPaper} target="_blank">Paper</a></li>    </ul>
   );
   const descJ5 = " Learned and practiced the necessary statistics topics, R libraries and syntax through my advisor and open resources" +
   " to conduct the experiment. Generated random populations of varying size, population shape (normal, uniform and mixed-normal) "
