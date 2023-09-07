@@ -35,6 +35,7 @@ function Nav (){
   );
 }
 
+{/**experience section */}
 function Experience({jobTitle, company, start, end, description, software, workResults}) {
 
   return (
@@ -55,6 +56,7 @@ function Experience({jobTitle, company, start, end, description, software, workR
   );
 }
 
+{/**For projects */}
 function Work ({projName, description, software}) {
 
   return (
@@ -71,6 +73,7 @@ function Work ({projName, description, software}) {
     </div>
   );
 }
+
 
 function App() {
   const descJ1 = "Implemented Software Development Cycle, with small team, for website front and backend."+
