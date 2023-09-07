@@ -12,7 +12,6 @@ import robustPoster from './assets/papers-presentations/Robustness-of-a-Two-Stag
 import sasnReport from './assets/papers-presentations/sasn_course_of_study_report.pdf';
 
 function Nav (){
-
   return(
     <nav id="index" class="border-b-[2px] p-1">
         <ul class="m-0 p-0 list-none items-center flex flex-row-reverse text-2xl">
@@ -35,7 +34,6 @@ function Nav (){
   );
 }
 
-{/**experience section */}
 function Experience({jobTitle, company, start, end, description, software, workResults}) {
 
   return (
@@ -56,7 +54,6 @@ function Experience({jobTitle, company, start, end, description, software, workR
   );
 }
 
-{/**For projects */}
 function Work ({projName, description, software}) {
 
   return (
@@ -112,7 +109,6 @@ function App() {
     </ul>
   );
   
-
   const descJ3 = "Developed code to conduct experiments in a Head-Mounted Display using Psychtoolbox library and others in MATLAB."+
   "Installed appropriate drivers for HMD to display stimuli. Used Vizard to create virtual environments in HMD. Use summary statistics,"+
   "distribution plots and joy plots in R for easy assesment of experiment data.";
@@ -169,6 +165,7 @@ function App() {
 
   return (
     <body class="h-screen">
+          {/**Home page */}
           <div class="h-full">
             {/*NAV BAR */}
             <Nav />
@@ -188,6 +185,7 @@ function App() {
             </div>
           </div>
       
+      {/**Experience and Projects*/}
       <div id="experience" class="h-[70vw]">
 
         <div class="h-1/5">
@@ -219,6 +217,7 @@ function App() {
 
       </div>
       <br/><br/>
+      {/**Software and tools used*/}
       <footer class="font-light">Drafted in figma, coded in Visual Studio Code. Built with Tailwindcss, React and Vite.</footer>
       
     </body>
