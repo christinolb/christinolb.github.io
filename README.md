@@ -1,2 +1,6 @@
-# christinolb.github.io
-Collection of all my related work in Software Development
+# Christino's Web Portfolio
+**Showcase of my web develoment skills and work done while studying Computer Science**
+
+***
+
+
