@@ -19,7 +19,9 @@ I struggled with keeping things simple in the design of my web portfolio. I was 
 ## How to use the project
 If you were moved or inspired by my portfolio and would like to use it, feel free! Here's how:
 
-1. Clone repo or download zip
+1. Clone repo (a) or download zip (b)
+
+a. `git clone` in git 
 
 ![step-one](https://github.com/christinolb/christinolb.github.io/assets/49823328/d879b3a1-7bb3-437a-a4a1-40537d487e47)
 
