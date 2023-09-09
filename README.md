@@ -48,3 +48,10 @@ a. `git clone` in git
 8. **Run** `npm run dev`
 
 ![step-eight](https://github.com/christinolb/christinolb.github.io/assets/49823328/da4fa932-cff1-4ac2-aab8-162d7aae7a90)
+
+
+## Credits
+
+A lot of my inspiration derived from [Brittany Chiang's](https://brittanychiang.com/?ref=hackernoon.com) web portfolio. I highly recommend you check her's out it is a work of art! With the experience she has, she keeps everything concise. She expediciously delivers her worth as a Developer, in an entertaining manner.
+
+
