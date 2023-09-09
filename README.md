@@ -19,16 +19,42 @@ I struggled with keeping things simple in the design of my web portfolio. I was 
 ## How to use the project
 If you were moved or inspired by my portfolio and would like to use it, feel free! Here's how:
 
-1. Clone repo or download zip
+1. **Clone repo (a) or download zip (b)**
 
-2. Open folder in vscode
+a. `git clone` in git 
 
-3. Open package.json
+![step-one](https://github.com/christinolb/christinolb.github.io/assets/49823328/d879b3a1-7bb3-437a-a4a1-40537d487e47)
 
-4. Click debug and on the dropdown which follows press dev
 
-5. Open new terminal
+2. **Open folder in vscode**
 
-6. Run `npm install`
+![step-two](https://github.com/christinolb/christinolb.github.io/assets/49823328/67f5de81-eec7-4735-9bc4-decba284c4d1)
 
-7. Run `npm run dev`
+
+3. **Open package.json**
+
+4. **Click debug and on the dropdown which follows press dev**
+
+5. **Open new terminal**
+
+![step-five](https://github.com/christinolb/christinolb.github.io/assets/49823328/d402ca6f-e1b4-4d4d-b57a-18c55b6bd1ea)
+
+
+7. **Run** `npm install`
+
+![step-seven](https://github.com/christinolb/christinolb.github.io/assets/49823328/759d5f7a-ae46-4a19-aa7b-7bc842085c4c)
+
+
+8. **Run** `npm run dev`
+
+![step-eight](https://github.com/christinolb/christinolb.github.io/assets/49823328/da4fa932-cff1-4ac2-aab8-162d7aae7a90)
+
+
+## Credits
+
+A lot of my inspiration derived from [Brittany Chiang's](https://brittanychiang.com/?ref=hackernoon.com) web portfolio. I highly recommend you check her's out it is a work of art! With the experience she has, she keeps everything concise. She expediciously delivers her worth as a Developer, in an entertaining manner.
+
+
+## License
+
+This project is licensed under the MIT license, Copyright (c) 2023 For more information see LICENSE.md.
