@@ -21,11 +21,13 @@ If you were moved or inspired by my portfolio and would like to use it, feel fre
 
 1. Clone repo or download zip
 
-![Step One](/img/step-one.png)
+![step-one](https://github.com/christinolb/christinolb.github.io/assets/49823328/d879b3a1-7bb3-437a-a4a1-40537d487e47)
+
 
 2. Open folder in vscode
 
-![Step Two](/img/step-two.png)
+![step-two](https://github.com/christinolb/christinolb.github.io/assets/49823328/67f5de81-eec7-4735-9bc4-decba284c4d1)
+
 
 3. Open package.json
 
@@ -33,11 +35,12 @@ If you were moved or inspired by my portfolio and would like to use it, feel fre
 
 5. Open new terminal
 
-![Step Five](/img/step-five.png)
+![step-five](https://github.com/christinolb/christinolb.github.io/assets/49823328/d402ca6f-e1b4-4d4d-b57a-18c55b6bd1ea)
+
 
 7. Run `npm install`
 
-![Step Seven](/img/step-seven.png)
+![step-seven](https://github.com/christinolb/christinolb.github.io/assets/49823328/759d5f7a-ae46-4a19-aa7b-7bc842085c4c)
 
 
 8. Run `npm run dev`
