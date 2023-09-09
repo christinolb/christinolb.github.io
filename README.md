@@ -18,4 +18,17 @@ I struggled with keeping things simple in the design of my web portfolio. I was 
 
 ## How to use the project
 If you were moved or inspired by my portfolio and would like to use it, feel free! Here's how:
-1. 
+
+1. Clone repo or download zip
+
+2. Open folder in vscode
+
+3. Open package.json
+
+4. Click debug and on the dropdown which follows press dev
+
+5. Open new terminal
+
+6. Run `npm install`
+
+7. Run `npm run dev`
