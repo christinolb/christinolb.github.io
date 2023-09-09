@@ -21,7 +21,11 @@ If you were moved or inspired by my portfolio and would like to use it, feel fre
 
 1. Clone repo or download zip
 
+![Step One](/img/step-one.png)
+
 2. Open folder in vscode
+
+![Step Two](/img/step-two.png)
 
 3. Open package.json
 
@@ -29,6 +33,13 @@ If you were moved or inspired by my portfolio and would like to use it, feel fre
 
 5. Open new terminal
 
-6. Run `npm install`
+![Step Five](/img/step-five.png)
 
-7. Run `npm run dev`
+7. Run `npm install`
+
+![Step Seven](/img/step-seven.png)
+
+
+8. Run `npm run dev`
+
+![step-eight](https://github.com/christinolb/christinolb.github.io/assets/49823328/da4fa932-cff1-4ac2-aab8-162d7aae7a90)
