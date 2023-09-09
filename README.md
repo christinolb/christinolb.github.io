@@ -29,6 +29,6 @@ If you were moved or inspired by my portfolio and would like to use it, feel fre
 
 5. Open new terminal
 
-6. Run 'npm install'
+6. Run `npm install`
 
-7. Run 'npm run dev'
+7. Run `npm run dev`
