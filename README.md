@@ -17,4 +17,5 @@ Given that I was already familiar with HTML, JavaScript and CSS, learning React 
 I struggled with keeping things simple in the design of my web portfolio. I was over ambitious at first which led to me try and make the most intricate and captivating portfolio despite this being my first time. I ran into road blocks trying to do complex and moving parts and had to humble myself time after time until I submitted. I realized that I can always build upon what I have, as long as I have something to build upon! Thus I built a static site which gets the job done and piece by piece I will add cool animations and more customizations to fully express myself. I hope to add snap scrolling, moving text as users scroll down and a more captivating color scheme. 
 
 ## How to use the project
-(in progress)
+If you were moved or inspired by my portfolio and would like to use it, feel free! Here's how:
+1. 
