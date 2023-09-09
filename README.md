@@ -19,32 +19,32 @@ I struggled with keeping things simple in the design of my web portfolio. I was 
 ## How to use the project
 If you were moved or inspired by my portfolio and would like to use it, feel free! Here's how:
 
-1. Clone repo (a) or download zip (b)
+1. **Clone repo (a) or download zip (b)**
 
 a. `git clone` in git 
 
 ![step-one](https://github.com/christinolb/christinolb.github.io/assets/49823328/d879b3a1-7bb3-437a-a4a1-40537d487e47)
 
 
-2. Open folder in vscode
+2. **Open folder in vscode**
 
 ![step-two](https://github.com/christinolb/christinolb.github.io/assets/49823328/67f5de81-eec7-4735-9bc4-decba284c4d1)
 
 
-3. Open package.json
+3. **Open package.json**
 
-4. Click debug and on the dropdown which follows press dev
+4. **Click debug and on the dropdown which follows press dev**
 
-5. Open new terminal
+5. **Open new terminal**
 
 ![step-five](https://github.com/christinolb/christinolb.github.io/assets/49823328/d402ca6f-e1b4-4d4d-b57a-18c55b6bd1ea)
 
 
-7. Run `npm install`
+7. **Run** `npm install`
 
 ![step-seven](https://github.com/christinolb/christinolb.github.io/assets/49823328/759d5f7a-ae46-4a19-aa7b-7bc842085c4c)
 
 
-8. Run `npm run dev`
+8. **Run** `npm run dev`
 
 ![step-eight](https://github.com/christinolb/christinolb.github.io/assets/49823328/da4fa932-cff1-4ac2-aab8-162d7aae7a90)
