@@ -55,3 +55,6 @@ a. `git clone` in git
 A lot of my inspiration derived from [Brittany Chiang's](https://brittanychiang.com/?ref=hackernoon.com) web portfolio. I highly recommend you check her's out it is a work of art! With the experience she has, she keeps everything concise. She expediciously delivers her worth as a Developer, in an entertaining manner.
 
 
+## License
+
+This project is licensed under the MIT license, Copyright (c) 2023 For more information see LICENSE.md.
