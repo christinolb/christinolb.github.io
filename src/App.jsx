@@ -10,7 +10,6 @@ import frfdmsProcess from './assets/papers-presentations/FRFDMSProcessGeneral.pd
 import robustPaper from './assets/papers-presentations/Robustness-of-a-Two-Stage-Procedure_paper.pdf';
 import robustPoster from './assets/papers-presentations/Robustness-of-a-Two-Stage-Procedure.pdf';
 import sasnReport from './assets/papers-presentations/sasn_course_of_study_report.pdf';
-import { Router } from "react-router-dom";
 
 
 function Experience({jobTitle, company, start, end, description, software, workResults}) {
