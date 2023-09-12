@@ -1,6 +1,7 @@
 /* src/App.jsx */
 import React from "react";
-import Nav from './Nav';
+import linkedinSVG from './assets/linkedin-logo.svg';
+import githubSVG from './assets/GITHUB-LOGO.svg';
 
 import "./App.css";
 import abstract from './assets/papers-presentations/abstract_BR.pdf';
@@ -140,15 +141,14 @@ function App() {
     </ul>
   );
 
+  /**splits words then letters into separate div */
+  let name = new SplitType('#name');
 
   return (
     <body class="h-screen">
-          {/**Home page */}
           <div class="h-full">
-            {/*NAV BAR */}
-            <Nav />
 
-            <h1 class="pt-20 flex justify-center text-[70px] text-[#3F6184]">
+            <h1 id="name" class="pt-20 flex justify-center text-[70px] text-[#3F6184]" >
                   Christino Lorenzo Barbosa
             </h1>
 
@@ -161,6 +161,24 @@ function App() {
                       Across the realms of Computer Science Autonomously and Cooperatively...<br/><br/>
                   </p>
             </div>
+
+            <div>
+              <ul class="m-0 p-0 list-none items-center flex flex-row justify-center text-2xl">
+                <li>
+                  <a class="hover:scale-75 transition delay-150 px-4 block" href="https://www.linkedin.com/in/christino-barbosa-8a4587197/" 
+                      target="_blank"><img src={linkedinSVG} height='70' width='70' alt="LinkedIn"/></a>
+                </li>
+                <li>
+                <a class="hover:scale-75 transition delay-150 px-2 block" href="https://github.com/christinolb" target="_blank">
+                  <img src={githubSVG} width="100" height="100" alt="GitHub"/></a>
+                </li>
+              </ul>
+            </div>
+
+            <h1 class="text-[#778899] text-xl justify-center pt-9">
+              More info below
+            </h1>
+
           </div>
       
       {/**Experience and Projects*/}
