@@ -1,9 +1,9 @@
 /* src/App.jsx */
 import React from "react";
-import linkedinSVG from './assets/linkedin-logo.svg';
-import githubSVG from './assets/GITHUB-LOGO.svg';
 
 import "./App.css";
+import linkedinSVG from './assets/linkedin-logo.svg';
+import githubSVG from './assets/GITHUB-LOGO.svg';
 import abstract from './assets/papers-presentations/abstract_BR.pdf';
 import posterBr from './assets/papers-presentations//ChristinoResearchPoster.pdf';
 import frfdmsPaper from'./assets/papers-presentations/FRFDMS-paper.pdf';
@@ -69,7 +69,7 @@ function App() {
   );
   const workResult1 = (
     <ul>
-      <li class="font-bold hover:underline inline-block text-[#3F6184] decoration-2 px-1"><a href="https://github.com/rutgers-newark-gslsamp/run-gslsamp-site" target="_blank">Git Repository (in progress)</a></li>
+      <li class="font-bold hover:underline inline-block text-[#3F6184] decoration-2 px-1"><a href="https://run-gslsamp-site-fork.vercel.app/" target="_blank">Git Repository (in progress)</a></li>
     </ul>
   );
 
@@ -140,9 +140,6 @@ function App() {
       <li class="font-bold hover:underline inline-block text-[#3F6184] decoration-2 px-2"><a href={robustPaper} target="_blank">Research Paper</a></li>
     </ul>
   );
-
-  /**splits words then letters into separate div */
-  let name = new SplitType('#name');
 
   return (
     <body class="h-screen">
