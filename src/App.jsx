@@ -186,11 +186,18 @@ function App() {
           </div>
       
       {/**Experience and Projects*/}
-      <div id="experience" class="h-[70vw]">
+      <div class="flex flex-wrap justify-center gap-8">
 
-        <div class="h-1/5">
-          <Experience jobTitle="Web Developer" company="Rutgers Newark LSAMP" start="January 2023" end="August 2023" 
-          description={descJ1} software={softwareJ1} workResults={workResult1}/>
+        <div class="w-full mb-8">
+          <Experience
+            jobTitle="Web Developer"
+            company="Rutgers Newark LSAMP"
+            start="January 2023"
+            end="August 2023"
+            description={descJ1}
+            software={softwareJ1}
+            workResults={workResult1}
+          />
         </div>
 
         <div class="h-1/5">
@@ -225,3 +232,4 @@ function App() {
 }
 
 export default App;
+
